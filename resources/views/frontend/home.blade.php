@@ -1,4 +1,5 @@
 @extends('layouts.frontend')
+@section('pagetitle') Home | @endsection
 @section('home') class="active" @endsection
 @section('content')
 <!-- Features -->
