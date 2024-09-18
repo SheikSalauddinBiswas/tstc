@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/OwlCarousel2-2.2.1/animate.css'); }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/main_styles.css'); }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/responsive.css'); }}">
+@yield('contact_css')
 </head>
 <body>
 
@@ -67,20 +68,12 @@
 							<nav class="main_nav_contaner ml-auto">
 								<ul class="main_nav">
 									<li @yield('home')><a href="/tstc">Home</a></li>
+									<li @yield('courses')><a href="/tstc/courses">Courses</a></li>
+									<li @yield('blog')><a href="/tstc/blog">Blog</a></li>
 									<li @yield('about')><a href="/tstc/about">About</a></li>
-									<li><a href="courses.html">Courses</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="#">Page</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li @yield('contact')><a href="/tstc/contact">Contact</a></li>
 								</ul>
 								<div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
-
-								<!-- Hamburger -->
-
-								<div class="shopping_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
-								<div class="hamburger menu_mm">
-									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
-								</div>
 							</nav>
 
 						</div>
@@ -122,7 +115,7 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
-				<li class="menu_mm"><a href="index.html">Home</a></li>
+				<li class="menu_mm"><a href="">Home</a></li>
 				<li class="menu_mm"><a href="#">About</a></li>
 				<li class="menu_mm"><a href="#">Courses</a></li>
 				<li class="menu_mm"><a href="#">Blog</a></li>
@@ -258,6 +251,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{ asset('public/plugins/OwlCarousel2-2.2.1/owl.carousel.js'); }}"></script>
 <script src="{{ asset('public/plugins/easing/easing.js'); }}"></script>
 <script src="{{ asset('public/plugins/parallax-js-master/parallax.min.js'); }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="{{ asset('public/js/custom.js'); }}"></script>
+<script src="{{ asset('public/js/contact.js'); }}"></script>
 </body>
 </html>

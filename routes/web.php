@@ -20,3 +20,13 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('Frontend.about');
 });
+Route::get('/courses', function () {
+    return view('Frontend.courses');
+});
+Route::get('/contact', function () {
+    return view('Frontend.contact');
+});
+Route::get('/blog', function () {
+    return view('Frontend.blog');
+});
+
