@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('pagetitle') Contact | @endsection
 @section('contact') class="active" @endsection
-@section('contact_css')
+@section('others_css')
 <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/contact.css'); }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/contact_responsive.css'); }}">
 @endsection

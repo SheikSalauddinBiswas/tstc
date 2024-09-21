@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('public/plugins/OwlCarousel2-2.2.1/animate.css'); }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/main_styles.css'); }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/responsive.css'); }}">
-@yield('contact_css')
+@yield('others_css')
 </head>
 <body>
 
@@ -254,5 +254,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="{{ asset('public/js/custom.js'); }}"></script>
 <script src="{{ asset('public/js/contact.js'); }}"></script>
+<script src="{{ asset('public/plugins/colorbox/jquery.colorbox-min.js'); }}"></script>
+<script src="{{ asset('public/js/about.js'); }}"></script>
+<script src="{{ asset('public/js/courses.js'); }}"></script>
+
 </body>
 </html>
