@@ -33,3 +33,12 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 
+
+Route::get('/login', function () {
+    return view('Frontend.login');
+});
+
+
+Route::get('/registration', function () {
+    return view('Frontend.registration');
+});
