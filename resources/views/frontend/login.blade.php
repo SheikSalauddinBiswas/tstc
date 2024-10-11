@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title> Login | TSTC</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('public/styles/styles.css'); }}">
 
 </head>
@@ -21,7 +21,7 @@
           <div class="col-md-8 col-lg-6 col-xxl-3">
             <div class="card mb-0">
               <div class="card-body">
-                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+                <a href="/tstc" class="text-nowrap logo-img text-center d-block py-3 w-100">
                   <img src="public/images/logo.png" width="180" alt="">
                 </a>
                 <form>
