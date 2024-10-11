@@ -29,4 +29,7 @@ Route::get('/contact', function () {
 Route::get('/blog', function () {
     return view('Frontend.blog');
 });
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
 
