@@ -42,3 +42,7 @@ Route::get('/login', function () {
 Route::get('/registration', function () {
     return view('Frontend.registration');
 });
+
+Route::get('/regsuccess', function () {
+    return view('Frontend.regsuccess');
+});
