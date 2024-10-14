@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,11 +43,14 @@ Route::get('/registration', function () {
 Route::get('/regsuccess', function () {
     return view('Frontend.regsuccess');
 });
-Route::get('/admin_contact', function () {
-    return view('admin.contact');
-});
+// Route::get('/admin_contact', function () {
+//     return view('admin.contact');
+// });
 
 
 
 //Admin 
 Route::get('/admin',[HomeController::class, 'index']);
+Route::prefix('admin')->group(function() {
+    Route::resource('/contact',AdminContactController::class) ;
+});

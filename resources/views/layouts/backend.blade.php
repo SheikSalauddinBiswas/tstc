@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TSTC | Admin  @yield('pagetitle')</title>
-  <link rel="shortcut icon" type="image/png" href="public/logo/tstc_logo.png" />
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="shortcut icon" type="image/png" href="{{ asset('public/logo/tstc_logo.png'); }}" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
    @yield('page_css')
   
 </head>
@@ -21,7 +21,7 @@
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="/tstc/admin" class="text-nowrap logo-img d-flex">
-            <img src="public/logo/tstc_logo.png" width="35" alt="" />
+            <img src="{{ asset('public/logo/tstc_logo.png'); }}" width="35" alt="" />
             <h2>TSTC</h2>
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -40,7 +40,7 @@
               <span class="hide-menu">Admin Panal</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/tstc/admin" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('/admin')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -48,7 +48,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="/tstc/admin_contact" aria-expanded="false">
+              <a class="sidebar-link" href="{{route('contact.index')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-receipt"></i>
                 </span>
@@ -79,7 +79,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  <img src="public/admin/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                  <img src="{{ asset('public/admin/images/profile/user-1.jpg'); }}" alt="" width="35" height="35" class="rounded-circle">
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
@@ -111,13 +111,13 @@
 
 
     </div>
-  <script src="public/admin/libs/jquery/dist/jquery.min.js"></script>
-  <script src="public/admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="public/admin/js/sidebarmenu.js"></script>
-  <script src="public/admin/js/app.min.js"></script>
-  <script src="public/admin/libs/apexcharts/dist/apexcharts.min.js"></script>
-  <script src="public/admin/libs/simplebar/dist/simplebar.js"></script>
-  <script src="public/admin/js/dashboard.js"></script>
+  <script src="{{ asset('public/admin/libs/jquery/dist/jquery.min.js'); }}"></script>
+  <script src="{{ asset('public/admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js'); }}"></script>
+  <script src="{{ asset('public/admin/js/sidebarmenu.js'); }}"></script>
+  <script src="{{ asset('public/admin/js/app.min.js'); }}"></script>
+  <script src="{{ asset('public/admin/libs/apexcharts/dist/apexcharts.min.js'); }}"></script>
+  <script src="{{ asset('public/admin/libs/simplebar/dist/simplebar.js'); }}"></script>
+  <script src="{{ asset('public/admin/js/dashboard.js'); }}"></script>
 </body>
 
 </html>
