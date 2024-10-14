@@ -30,7 +30,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 offset-md-3 mt-5">
+      <div class="col-md-6 position-absolute top-50 start-50 translate-middle ">
         <div class="card">
           <div class="card-body text-center">
             <h1 class="card-title">Registered Successfully!</h1>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +30,6 @@ Route::get('/contact', function () {
 Route::get('/blog', function () {
     return view('Frontend.blog');
 });
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
-
-
 Route::get('/login', function () {
     return view('Frontend.login');
 });
@@ -46,3 +42,11 @@ Route::get('/registration', function () {
 Route::get('/regsuccess', function () {
     return view('Frontend.regsuccess');
 });
+Route::get('/admin_contact', function () {
+    return view('admin.contact');
+});
+
+
+
+//Admin 
+Route::get('/admin',[HomeController::class, 'index']);
