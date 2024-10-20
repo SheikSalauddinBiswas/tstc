@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminContactController;
+use App\Http\Controllers\AdminProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +51,8 @@ Route::get('/regsuccess', function () {
 
 
 //Admin 
-Route::get('/admin',[HomeController::class, 'index']);
-Route::prefix('admin')->group(function() {
-    Route::resource('/contact',AdminContactController::class) ;
+Route::get('/admin', [HomeController::class, 'index']);
+Route::prefix('admin')->group(function () {
+    Route::resource('/contact', AdminContactController::class);
+    Route::resource('/my-profile', AdminProfileController::class);
 });

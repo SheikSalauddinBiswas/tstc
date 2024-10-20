@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TSTC | Admin  @yield('pagetitle')</title>
+  <title>TSTC | Admin @yield('pagetitle')</title>
   <link rel="shortcut icon" type="image/png" href="{{ asset('public/logo/tstc_logo.png'); }}" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-   @yield('page_css')
-  
+  @yield('page_css')
+
 </head>
 
 <body>
@@ -83,7 +83,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                   <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                    <a href="{{route('my-profile.index')}}" class="d-flex align-items-center gap-2 dropdown-item">
                       <i class="ti ti-user fs-6"></i>
                       <p class="mb-0 fs-3">My Profile</p>
                     </a>
@@ -111,13 +111,13 @@
 
 
     </div>
-  <script src="{{ asset('public/admin/libs/jquery/dist/jquery.min.js'); }}"></script>
-  <script src="{{ asset('public/admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js'); }}"></script>
-  <script src="{{ asset('public/admin/js/sidebarmenu.js'); }}"></script>
-  <script src="{{ asset('public/admin/js/app.min.js'); }}"></script>
-  <script src="{{ asset('public/admin/libs/apexcharts/dist/apexcharts.min.js'); }}"></script>
-  <script src="{{ asset('public/admin/libs/simplebar/dist/simplebar.js'); }}"></script>
-  <script src="{{ asset('public/admin/js/dashboard.js'); }}"></script>
+    <script src="{{ asset('public/admin/libs/jquery/dist/jquery.min.js'); }}"></script>
+    <script src="{{ asset('public/admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js'); }}"></script>
+    <script src="{{ asset('public/admin/js/sidebarmenu.js'); }}"></script>
+    <script src="{{ asset('public/admin/js/app.min.js'); }}"></script>
+    <script src="{{ asset('public/admin/libs/apexcharts/dist/apexcharts.min.js'); }}"></script>
+    <script src="{{ asset('public/admin/libs/simplebar/dist/simplebar.js'); }}"></script>
+    <script src="{{ asset('public/admin/js/dashboard.js'); }}"></script>
 </body>
 
 </html>
