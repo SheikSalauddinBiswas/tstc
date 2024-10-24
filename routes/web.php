@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminAboutController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminContactController;
@@ -22,11 +23,10 @@ Route::get('/', [FrontendController::class, 'index']);
 
 
 Route::get('/contact', [FrontendController::class, 'contact']);
+Route::get('/about', [FrontendController::class, 'about']);
 Route::post('/contact/contact_massage', [FrontendController::class, 'contact_massage'])->name('contact.contact_massage');
 
-Route::get('/about', function () {
-    return view('Frontend.about');
-});
+
 Route::get('/courses', function () {
     return view('Frontend.courses');
 });
@@ -56,5 +56,7 @@ Route::get('/regsuccess', function () {
 Route::get('/admin', [HomeController::class, 'index']);
 Route::prefix('admin')->group(function () {
     Route::resource('/contact', AdminContactController::class);
+    Route::resource('/about', AdminAboutController::class);
+    Route::get('/create_question', [AdminAboutController::class, 'create_question'])->name('about.create_question');
     Route::resource('/my-profile', AdminProfileController::class);
 });

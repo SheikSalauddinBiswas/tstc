@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ContactMassage;
 use Illuminate\Http\Request;
 
-class FrontendController extends Controller
+class AdminAboutController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('frontend.home');
+        return view('admin.about.index');
     }
 
     /**
@@ -20,8 +19,9 @@ class FrontendController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.about.create');
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -62,30 +62,11 @@ class FrontendController extends Controller
     {
         //
     }
-    // frontend contact section
-    public function contact()
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create_question()
     {
-        return view('frontend.contact');
-    }
-    //contact massage section
-    public function contact_massage(Request $request)
-    {
-        $massages = new ContactMassage();
-
-        $massages->name = $request->input('name');
-        $massages->e_mail = $request->input('e_mail');
-        $massages->massage = $request->input('massage');
-
-        $res = $massages->save();
-        if ($res) {
-            $message = 'Massage sent successfully !';
-            return redirect('/contact')->with('success', $message);
-        }
-        return redirect()->back()->with('danger', 'Something went wrong!');
-    }
-    // frontend about section
-    public function about()
-    {
-        return view('frontend.about');
+        return view('admin.about.create_question');
     }
 }
