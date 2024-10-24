@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminContactController;
 use App\Http\Controllers\AdminProfileController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,13 @@ use App\Http\Controllers\AdminProfileController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//frontend routes
+Route::get('/', [FrontendController::class, 'index']);
 
-Route::get('/', function () {
-    return view('Frontend.home');
-});
+
+
+Route::get('/contact', [FrontendController::class, 'contact']);
+Route::post('/contact/contact_massage', [FrontendController::class, 'contact_massage'])->name('contact.contact_massage');
 
 Route::get('/about', function () {
     return view('Frontend.about');
@@ -26,9 +30,7 @@ Route::get('/about', function () {
 Route::get('/courses', function () {
     return view('Frontend.courses');
 });
-Route::get('/contact', function () {
-    return view('Frontend.contact');
-});
+
 Route::get('/blog', function () {
     return view('Frontend.blog');
 });

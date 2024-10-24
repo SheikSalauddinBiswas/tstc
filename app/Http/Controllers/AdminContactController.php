@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
+use App\Http\Controllers\DB;
+use App\Models\ContactMassage;
 
 class AdminContactController extends Controller
 {
@@ -11,7 +14,10 @@ class AdminContactController extends Controller
      */
     public function index()
     {
-        return view('admin.contact.contact');
+        $contact_title = Contact::where('slug', 'title')->get();
+        $contact_address = Contact::where('slug', 'address')->get();
+        $contact_massage = ContactMassage::orderBy('id', 'DESC')->get();
+        return view('admin.contact.contact', compact('contact_title', 'contact_address', 'contact_massage'));
     }
 
     /**
@@ -27,7 +33,27 @@ class AdminContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = new Contact();
+
+        $contact->contact_info = $request->input('contact_info');
+        $contact->name = $request->input('name');
+        $contact->address = $request->input('address');
+        $contact->e_mail = $request->input('e-mail');
+        $contact->mobile = $request->input('mobile');
+
+        $slug = $request->input('name');
+        if (!isset($slug)) {
+            $slug = ('title');
+        } else $slug = ('address');
+        $contact->slug = $slug;
+
+
+        $res = $contact->save();
+
+        if ($res) {
+            $message = 'New page content created successfully !';
+            return redirect('/admin/contact')->with('success', $message);
+        } else return redirect()->back()->with('danger', 'Something went wrong!');
     }
 
     /**
