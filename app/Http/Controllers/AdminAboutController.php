@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use Illuminate\Http\Request;
 
 class AdminAboutController extends Controller
@@ -11,7 +12,8 @@ class AdminAboutController extends Controller
      */
     public function index()
     {
-        return view('admin.about.index');
+        $about = About::where('slug', 'question')->get();
+        return view('admin.about.index', compact('about'));
     }
 
     /**
@@ -28,7 +30,20 @@ class AdminAboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $about = new About();
+
+        $about->question = $request->input('question');
+        $about->answer = $request->input('answer');
+        $about->slug = $request->input('slug');
+        $about->image = $request->input('image');
+        $about->image_title = $request->input('image_title');
+        $about->image_description = $request->input('image_description');
+
+        $res = $about->save();
+        if ($res) {
+            $message = 'New question add successfully !';
+            return redirect('/admin/about')->with('success', $message);
+        } else return redirect()->back()->with('danger', 'Something went wrong!');
     }
 
     /**

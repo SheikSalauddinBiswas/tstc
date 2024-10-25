@@ -7,7 +7,6 @@
   <title>TSTC | Admin @yield('pagetitle')</title>
   <link rel="shortcut icon" type="image/png" href="{{ asset('public/logo/tstc_logo.png'); }}" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{ asset('public/admin/icon/themify-icons.css')}}" />
   @yield('page_css')
 
 </head>
@@ -59,7 +58,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="{{route('about.index')}}" aria-expanded="false">
                 <span>
-                  <i class="ti-info-alt"></i>
+                  <i class="ti ti-info-circle"></i>
                 </span>
                 <span class="hide-menu">About</span>
               </a>

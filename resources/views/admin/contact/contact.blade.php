@@ -62,7 +62,8 @@
         <table class="table table-bordered border-primary">
           <thead class="bg-light">
             <tr class="position-relative text-center">
-              <th colspan="2" scope="col">Name</th>
+              <th scope="col">Name</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>

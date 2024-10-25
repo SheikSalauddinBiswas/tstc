@@ -23,6 +23,37 @@
                 <h5 class="card-title fw-semibold mb-4">About Question section</h5>
                 <a href="{{route('about.create_question')}}" class="btn btn-light m-1">Add New Info</a>
             </div>
+            <br>
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Sl</th>
+                        <th scope="col">Question</th>
+                        <th scope="col">Answer</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php $srl=1; @endphp
+                    @foreach ($about as $data)
+                    <tr>
+                        <th scope="row">{{$srl++}}</th>
+                        <td>{{$data->question}}</td>
+                        <td>{{$data->answer}}</td>
+                        <td>
+                            <div class="d-flex justify-content-between">
+                                <span>
+                                    <h4><a href=""><i class="ti ti-eye me-1"></a></i></h4>
+                                </span>
+                                <span>
+                                    <h4><a href=""><i class="ti ti-trash ms-1"></i></a></h4>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
 
 
 
